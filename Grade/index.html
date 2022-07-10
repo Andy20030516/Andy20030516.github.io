@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>个人成绩</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+    <link rel="icon" href="./picture/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--End-->
+    <script>
+    fetch('https://v1.hitokoto.cn')
+        .then(function (res){
+        return res.json();
+        })
+        .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = data.hitokoto;
+        })
+        .catch(function (err) {
+        console.error(err);
+        })
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        table, tr, td, th {
+            text-align: center;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr:nth-child(2n) {
+            background-color: rgba(88, 73, 65, 0.18);
+        }
+
+        tr:hover {
+            background-color: rgb(255, 235, 149);
+        }
+
+        #tt {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+
+    </style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<!--这里是上方的留白，万一以后想加个导航什么的呢。。。。-->
+<header class="site-header container animated fadeInDown">
+	<div class="header-wrapper"></div>
+    <div><h4><a href="../index.html">回到首页</a></h4></div>
+    <div>
+        <p class="power">© 2022 Powered By Andy
+        </p>
+    </div>
+    <p align="center">
+    <audio controls autoplay="autoplay" loop  id="music"> 
+        <source src="HTML音乐4.mp3" audio="">
+    </audio>
+    </p>
+</header>
+<div id="menu-container">
+            <div>
+                <table>
+                    <h3>2021-2022第一学年成绩表</h3>
+                    <table>
+                        <tr>
+                            <th>课程</th>
+                            <th>成绩</th>
+                            <th>学分</th>
+                            <th>绩点</th>
+                        </tr>
+                        <tr>
+                            <td>数学软件Matlab和lingo基础</td>
+                            <td>良好</td>
+                            <td>1.0</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>大学物理实验B</td>
+                            <td>优秀</td>
+                            <td>1.0</td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td>数学分析1</td>
+                            <td>81</td>B
+                            <td>4.0</td>
+                            <td>3.1</td>
+                        </tr>
+                        <tr>
+                            <td>高等代数</td>
+                            <td>81</td>
+                            <td>4.0</td>
+                            <td>3.1</td>
+                        </tr>
+                        <tr>
+                            <td>数据科学与大数据导论</td>
+                            <td>良好</td>
+                            <td>0.5</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>程序设计与算法语言</td>
+                            <td>89</td>
+                            <td>4.0</td>
+                            <td>3.9</td>
+                        </tr>
+                        <tr>
+                            <td>军事技能</td>
+                            <td>合格</td>
+                            <td>2.0</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>形势与政策1</td>
+                            <td>良好</td>
+                            <td>0.5</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>思想道德修养与法律基础</td>
+                            <td>87</td>
+                            <td>3.0</td>
+                            <td>3.7</td>
+                        </tr>
+                        <tr>
+                            <td>大学生心理健康教育</td>
+                            <td>88</td>
+                            <td>1.0</td>
+                            <td>3.8</td>
+                        </tr>
+                        <tr>
+                            <td>大学始业教育</td>
+                            <td>合格</td>
+                            <td>1.0</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>大学语文</td>
+                            <td>90</td>
+                            <td>2.0</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>大学英语2</td>
+                            <td>90</td>
+                            <td>3.0</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>安吉户外运动俱乐部</td>
+                            <td>96</td>
+                            <td>1.0</td>
+                            <td>4.6</td>
+                        </tr>
+                        <tr>
+                            <td>Python基础</td>
+                            <td>95</td>
+                            <td>2.0</td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td>大学物理C</td>
+                            <td>79</td>
+                            <td>4.0</td>
+                            <td>2.9</td>
+                        </tr>
+                        <tr>
+                            <td>数学分析2</td>
+                            <td>75</td>
+                            <td>4.0</td>
+                            <td>2.5</td>
+                        </tr>
+                        <tr>
+                            <td>矩阵计算</td>
+                            <td>87</td>
+                            <td>3.0</td>
+                            <td>3.7</td>
+                        </tr>
+                        <tr>
+                            <td>体育2</td>
+                            <td>96</td>
+                            <td>1.0</td>
+                            <td>4.6</td>
+                        </tr>
+                        <tr>
+                            <td>形势与政策2</td>
+                            <td>优秀</td>
+                            <td>0.5</td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td>中国近现代史纲要</td>
+                            <td>81</td>
+                            <td>4.0</td>
+                            <td>3.1</td>
+                        </tr>
+                        <tr>
+                            <td>军事理论与国家安全教育</td>
+                            <td>86</td>
+                            <td>3.0</td>
+                            <td>3.6</td>
+                        </tr>
+                        <tr>
+                            <td>创业基础</td>
+                            <td>优秀</td>
+                            <td>2.0</td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td>劳动教育与实践A</td>
+                            <td>优秀</td>
+                            <td>0.5</td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td>大学英语3</td>
+                            <td>85</td>
+                            <td>3.0</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>离散数学</td>
+                            <td>92</td>
+                            <td>3.0</td>
+                            <td>4.2</td>
+                        </tr>
+                        <tr>
+                            <td>Java程序设计与Web开发</td>
+                            <td>74</td>
+                            <td>4.0</td>
+                            <td>2.4</td>
+                        </tr>
+                        <tr>
+                            <td id="tt" colspan="5">平均绩点：3.50，专业排名：1</td>
+                        </tr>
+                    </table>
+                </table>
+            </div>
+</div>
+
+<!-- templatemo 421 raleway -->
+<span class="border-top"></span>
+<span class="border-left"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+
+</body>
+</html>
